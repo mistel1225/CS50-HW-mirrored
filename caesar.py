@@ -21,7 +21,7 @@ def main(plaintext, k):
             if i.islower():
                 cyphertext += chr((ord(i)+k-97)%26+97)
         else:
-            cyphertext += ' '
+            cyphertext += i
     print(f"ciphertext: {cyphertext}")
 
 if __name__ == "__main__":
