@@ -22,8 +22,7 @@ def main(plaintext, k):
                 cyphertext += chr((ord(i)+k-97)%26+97)
         else:
             cyphertext += ' '
-    print(cyphertext, end="")
-    print("\n", end="")
+    print(f"ciphertext: {cyphertext}")
 
 if __name__ == "__main__":
     checklen()
