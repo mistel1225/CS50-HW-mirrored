@@ -9,10 +9,10 @@ def checklen():
             main(plaintext, k)
         else:
             print("input a positive number")
-            return 0
+            return 1
     else:
         print("usage:python caesar.py number")
-        return 0
+        return 1
 
 def main(plaintext, k):
     cyphertext = ''
