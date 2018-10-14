@@ -8,11 +8,12 @@ def codecheck():
         for c in cypherkey:
             if c.isalpha() == 0:
                 print("invalid key")
-                return 0
+                return sys.exit(1)
         words = cs50.get_string("plaintext: ")
         cypher(cypherkey, words)
     else:
         print("usage: python vigenere.py key")
+        return sys.exit(1)
 def cypher(cypherkey, words):
     wordslen = len(words)
     cypherwords=''
@@ -25,11 +26,11 @@ def cypher(cypherkey, words):
             cypherwords += chr((ord(words[i])-97+key)%26+97)
             j+=1
         elif words[i].isupper() == 1:
-            cypherwords += chr((ord(words[i])-65+key)%26+97)
+            cypherwords += chr((ord(words[i])-65+key)%26+65)
             j+=1
         else:
-            cypherwords += ' '
-    print(f"cyphertext: {cypherwords}\n", end="")
+            cypherwords += words[i]
+    print(f"ciphertext: {cypherwords}")
 
 
 if __name__ == "__main__":
