@@ -9,10 +9,10 @@ def checklen():
             main(plaintext, k)
         else:
             print("input a positive number")
-            return 1
+            return sys.exit(1)
     else:
         print("usage:python caesar.py number")
-        return 1
+        return sys.exut(1)
 
 def main(plaintext, k):
     cyphertext = ''
@@ -25,7 +25,7 @@ def main(plaintext, k):
         else:
             cyphertext += i
     print(f"ciphertext: {cyphertext}")
-    return 1
+    return sys.exit(0)
 
 if __name__ == "__main__":
     checklen()
