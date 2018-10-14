@@ -1,10 +1,13 @@
 from cs50 import get_int
 def main():
     height = get_int("height: ")
-    if height < 23 and height > 0:
+    checkHeight(height)
+
+def checkHeight(height):
+    if height < 24 and height >= 0:
         mario(height)
     else:
-        print("number should be heigher than 0 and less than 23")
+        main()
 
 def mario(height):
     for r in range(height):
